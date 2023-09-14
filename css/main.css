@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+/***** 웹폰트 ******************************************************************/
+@font-face {
+        font-family: 'Pretendard-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Pretendard-Light';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Pretendard-Bold';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+    }
+/**********************************************************************************/
+
+
+
+
+body {font-family:'Pretendard-Light',',Malgun Gothic','맑은고딕',; font-size: 14px;
+line-height: 1.5; color: black;}
+
+button {cursor: pointer; background: transparent;}
+
+.img {width: 100%;}
+
+.ico_friends {display: block; 
+background:url('../img/ico_friends.png') no-repeat 0 0 / 700px 1000px; 
+font-size:1px; color: transparent; line-height: 1px;}
+
+#container {max-width:640px; min-width: 320px; margin: auto;
+       }
+
+
+
+
+
+/**로고이미지있는 부분 바*************************************/
+header {position: fixed; top:0; left: 0; right: 0;
+        max-width:640px; min-width: 320px; margin: auto; background: white; 
+        z-index: 100;}
+header > * {}
+/**************************************************************/
+
+
+
+
+/**********위에 아이콘 클래스**********************************/
+header button {padding:5px;}
+.ico_gnb, .ico_cart, .ico_search {width: 24px; height: 24px; }
+.ico_gnb {background-position:-520px -60px;}
+.ico_cart {background-position:-70px -810px;}
+.ico_search {background-position:-40px -20px;}
+/***************************************************************/
+
+
+h1 {}
+
+h1 a {display: block ; width: 167px; height: 46px; margin: auto;}
+
+/**햄버거 버튼, 장바구니 버튼 , 돋보기 버튼*****************/
+.top_left , .top_right {position: absolute; position: absolute; top: 6px;}
+.top_left {left: 12px;}
+.top_right {right: 12px;}
+/***************************************************************/
+
+
+
+
+
+
+/* - 홈,베스트,콘텐츠,마이 네브메뉴Bar -****************************/
+nav {}
+.list_tab {display: flex;}
+.list_tab li {flex:1; text-align: center;}
+.list_tab li a {display: block; line-height:48px; 
+                font-size: 16px; }
+.list_tab a.on {font-weight:700;}
+.list_tab a.on:after {display: block; content:''; width:100%; 
+                      height:5px; background:black;
+                      transition:0.3s ease-out;}
+/***************************************************************/
+
+
+
+main {height:2000px; ;
+      padding-top: 96px;}
+
+/*swiper 슬라이더*/
+.swiper img {width: 100%;}
+
+
+.swiper-pagination-fraction {color: white; background: rgba(0,0,0,0.3);
+        width: auto; left:90%; bottom: 20px; top: auto;
+        padding: 0 7px; border-radius: 999px; font-size: 11px; line-height: 1.65;}
+
+.swiper-button-prev, .swiper-button-next {color: white; background: rgba(255,255,255,0.4);
+        width:36px ; height: 36px; border-radius: 50%;}
+
+.swiper-button-next:after,.swiper-button-prev:after {font-size: 20px;}
+
+
+
+/***슬라이더 사진위의 글씨****/
+.slider_text {position: absolute; bottom: 50px; left: 20px; color: white;}
+.slider_text h4 {font-size: 30px; font-weight: 700;}
+.slider_text span {font-size: 18px;} 
+
+
+
+
+
+/* 9개 아이콘 nav */
+#icon_nav{ margin-bottom: 20px;}
+
+#icon_nav ul {position: relative; display: flex;}
+
+#icon_nav li {position: relative; text-align: center; width: 100%; 
+              font-size: 10px; color:#4b4a4a;
+             margin: 5px; }
+
+#icon_nav img {width: 100%; border-radius: 15px;}
+
+#icon_nav li:hover {}
+
+
+
+
+
+/* 아이콘 위의 핑크색 알림 */
+.pink_dot {position: absolute; top: -3px; right: -5px; width:17px; height: 17px;
+        border: 3px solid white; background: #f64; 
+        border-radius: 100%;}
+
+
+
+
+
+
+/*새로나왔어요 탭*/
+#new_tap { width: 100%;}
+.new_head {position: relative; display: flex; 
+         width: 100%; height: 60px;}
+.new_head div {}
+.new_div1 {position: relative;margin-right: auto; 
+        font-size: 20px; font-weight: 700; vertical-align: middle;
+        line-height: 50px; display: inline-block;}
+.new_div2 {color: #4b4a4a;  line-height: 60px; font-size: 14px;}
+
+/* 새로나왔어요 탭 사진부분 */
+.new_pic {position: absolute; height: 500px; 
+          width: 636px;;}
+.new_pic ul {position: relative; display: flex; flex-wrap: wrap; }
+
+.new_pic li {position: relative; 
+        width: 155px; font-size:14px; text-overflow: ellipsis; 
+        margin-right: 3px; margin-top: 10px; margin-bottom: 20px;}
+.new_pic li img {position: relative; 
+        width: 100%; border-radius: 20px;}
+
+/*새로나왔어요 사진 아래 텍스트 */
+.new_text { padding: 10px 0;}
+.new_text > span {display: block; overflow: hidden; font-size: 12px; line-height: 17px;
+                  color: #616161; white-space:nowrap; text-overflow: ellipsis;
+                font-weight: 500; margin-right: 20px;}
+.new_text > p {font-weight: 600;}
+/*******************************************************************/
+
+#new_tap2 { width: 100%;}
+.new_head2 {position: absolute; display: flex; 
+         width: 100%; height: 60px;}
+.new_head2 {}
+.new_div2_1 {position: relative;margin-right: auto; 
+        font-size: 20px; font-weight: 700; vertical-align: middle;
+        line-height: 50px; display: inline-block;}
+.new_div2_2 {color: #4b4a4a;  line-height: 60px; font-size: 14px;}
+
+
+
+
+
+
+/*****왼쪽 슬라이더 메뉴**********************************************/
+.dark {position: fixed; background: rgba(0,0,0,0.8); z-index: 101; inset: 0; display: none;}
+
+.gnb {position: fixed; top: 0; left: 0; bottom: 0; width: 304px; background: white; z-index:102;
+      transform: translateX(-100%); transition: all 0.8s ease-in;}
+
+.gnb .inner {height: 100%; width: 304px; overflow-y: auto;}
+
+.info_user {display: flex; justify-content: space-between;  /*양끝에 배치*/ 
+        padding: 30px 16px;}
+
+.info_user .login {font-size: 16px; font-weight: 700; }
+
+.ico_arrow_right {display: inline-block; width: 16px; height: 16px; background-position: -320px 0;
+                margin-top: 3px;}
+
+.list_menu {padding: 16px 0;}
+
+.list_menu li {padding: 0 24px;}
+
+.list_menu li > a {display: block; line-height: 48px; font-size: 16px;}
+
+.ico_arrow_down { width: 16px; height: 16px; background-position: -360px 0;
+        margin-top: 15px; float: right;}
+
+.ico_arrow_down.on {background-position: -340px 0;}
+
+.list_sub {height: 0; text-align: center; overflow: hidden; transition: 0.3s ease-in;}
+
+.box_banner {padding:0 16px;}
+
+.box_banner img { width: 100%; border-radius: 8px; }
+
+
+.link_login{display: block ;text-align: center ;padding: 32px 0; margin-top: 16px; 
+        border-top: 1px solid #ddd;}
+
+.ico_lock{ text-align: center; display:block; width: 24px; height: 24px; background-position: -560px -20px;
+        vertical-align: middle;}
+
+.line {border-bottom: 1px solid #ddd; padding-bottom: 16px; margin-bottom: 16px;}
+
+/*****************************************************************************************************/
+
+
+
+
+
+/* 슬라이더 앗 로그인 팝업 */
+.loginPop {border: 2px solid red; position: absolute; top: 50%; left: 50%; 
+        transform:translate(-50%,-50%); z-index: 200; width:310px; background: white;
+        border-radius: 16px; padding: 40px; text-align: center; display: none;}
+
+.loginPop img {width: 128px;}
+
+.loginPop strong {display: block; font-size:18px; font-weight:700; 
+        margin-bottom:10px ;}
+
+.loginPop p {font-size: 15px; display: inline-block; }
+
+.loginPop button {}
+
+.loginPop button.talk_btn {background:#ffeb00; width:100%; padding: 10px 0;
+border-radius: 999px; margin-top: 20px; }
+
+.loginPop button.close {}
+
+.ico_talk { display: inline-block; width: 24px; height: 24px;
+        background-position:-480px -20px; 
+        vertical-align: middle; }
+
+.ico_close {display: block;
+        position: absolute; top: 16px; right: 16px; display: block; width: 24px; height: 24px; 
+        font-size: 1px; line-height: 0; color: transparent; 
+        background: url('../img/ico_close.png') no-repeat center center / 24px 24px;}
+
+/***************************************/
+
+
+
